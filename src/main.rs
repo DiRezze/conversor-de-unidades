@@ -1,12 +1,13 @@
 mod comprimento;
+mod get_input;
 mod massa;
 mod temperatura;
-mod get_input;
 
-use std::io::Write;
-use std::{thread, time};
 use crate::comprimento::converter_comprimento;
 use crate::get_input::get_input;
+use crate::temperatura::converter_temperatura;
+use std::io::Write;
+use std::{thread, time};
 
 fn main() {
     loop {
@@ -21,6 +22,7 @@ fn main() {
         match escolha.as_str() {
             "1" => {
                 println!("Opção escolhida: Conversor de Temperatura");
+                converter_temperatura();
             }
             "2" => {
                 println!("Opção escolhida: Conversor de Comprimento");
